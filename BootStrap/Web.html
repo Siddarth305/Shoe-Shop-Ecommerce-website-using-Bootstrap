@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elite Football Shoes</title>
+    <link rel="icon" href="img1.png" type="image/png">
+    <!-- Bootstrap CSS CDN for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for custom font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Add Bootstrap Icons CDN in <head> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background: #f8f9fa;
+      }
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+      .navbar-nav .nav-link {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+      }
+      .navbar-brand img {
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+        margin-right: 8px;
+      }
+      .hero-section {
+        background:url('img2.png') center center/cover no-repeat;
+        color: #fff;
+        padding: 300px 0 150px 0;
+        text-align: center;
+        position: relative;
+      }
+      .hero-section h1 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      .hero-section p {
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+      }
+      .card-title {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 700;
+      }
+      .price {
+        color: #0d6efd;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      .footer {
+        background: #222;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+      <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="#">
+          <img src="img1.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+          Elite Football
+        </a>
+        <!-- Centered links -->
+        <div class="mx-auto order-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row justify-content-center">
+            <li class="nav-item px-2">
+              <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#shop">Shop</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Cart on the right -->
+        <div class="d-flex ms-auto">
+          <a class="nav-link position-relative" href="cart.html">
+            <i class="bi bi-basket2-fill" style="font-size: 1.5rem;"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+              <span class="visually-hidden">cart items</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <h1>Elite Football Shoes</h1>
+        <p><br><br>Step up your game with our premium collection of football shoes. <br>Designed for comfort, speed, and style.</p>
+        <a href="#shop" class="btn btn-light btn-lg text-primary fw-bold">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="container py-5" id="shop">
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img3.png" class="card-img-top" alt="Football Shoe 1">
+            <div class="card-body">
+              <h5 class="card-title">Nike Mercurial Vapor</h5>
+              <p class="card-text">Lightweight, responsive, and perfect for speed. Dominate the field with Nike's latest technology.</p>
+              <div class="price mb-2">$120</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Nike Mercurial Vapor', 120, 'img3.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img4.png" class="card-img-top" alt="Football Shoe 2">
+            <div class="card-body">
+              <h5 class="card-title">Adidas Predator</h5>
+              <p class="card-text">Unmatched control and comfort. The Predator is built for precision and power on every touch.</p>
+              <div class="price mb-2">$135</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Adidas Predator', 135, 'img4.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img5.png" class="card-img-top" alt="Football Shoe 3">
+            <div class="card-body">
+              <h5 class="card-title">Puma Future Z</h5>
+              <p class="card-text">Dynamic fit and agility. The Future Z adapts to your foot for explosive movement and comfort.</p>
+              <div class="price mb-2">$110</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Puma Future Z', 110, 'img5.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img6.png" class="card-img-top" alt="Football Shoe 4">
+            <div class="card-body">
+              <h5 class="card-title">Under Armour Magnetico</h5>
+              <p class="card-text">Superior grip and comfort for all weather conditions. Play your best every match.</p>
+              <div class="price mb-2">$105</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Under Armour Magnetico', 105, 'img6.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img7.png" class="card-img-top" alt="Football Shoe 5">
+            <div class="card-body">
+              <h5 class="card-title">Mizuno Morelia Neo</h5>
+              <p class="card-text">Classic leather, modern performance. Lightweight and flexible for natural movement.</p>
+              <div class="price mb-2">$130</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Mizuno Morelia Neo', 130, 'img7.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img8.png" class="card-img-top" alt="Football Shoe 6">
+            <div class="card-body">
+              <h5 class="card-title">New Balance Furon</h5>
+              <p class="card-text">Engineered for speed and accuracy. Lightweight mesh upper for breathability.</p>
+              <div class="price mb-2">$115</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('New Balance Furon', 115, 'img8.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img9.png" class="card-img-top" alt="Football Shoe 7">
+            <div class="card-body">
+              <h5 class="card-title">Nike Phantom GT</h5>
+              <p class="card-text">Precision and power for playmakers. Textured upper for enhanced ball control.</p>
+              <div class="price mb-2">$140</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Nike Phantom GT', 140, 'img9.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img10.png" class="card-img-top" alt="Football Shoe 8">
+            <div class="card-body">
+              <h5 class="card-title">Adidas X Ghosted</h5>
+              <p class="card-text">Ultra-lightweight for explosive acceleration. Designed for the fastest players.</p>
+              <div class="price mb-2">$125</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Adidas X Ghosted', 125, 'img10.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 9 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img11.png" class="card-img-top" alt="Football Shoe 9">
+            <div class="card-body">
+              <h5 class="card-title">Puma Ultra</h5>
+              <p class="card-text">Speed and agility combined. Lightweight design for quick movements on the pitch.</p>
+              <div class="price mb-2">$118</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Puma Ultra', 118, 'img11.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 10 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img12.png" class="card-img-top" alt="Football Shoe 10">
+            <div class="card-body">
+              <h5 class="card-title">Umbro Medusae III</h5>
+              <p class="card-text">Soft touch and lightweight. Perfect for creative players who control the game.</p>
+              <div class="price mb-2">$112</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Umbro Medusae III', 112, 'img12.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 11 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img13.png" class="card-img-top" alt="Football Shoe 11">
+            <div class="card-body">
+              <h5 class="card-title">Diadora Brasil Elite</h5>
+              <p class="card-text">Italian craftsmanship meets modern tech. Comfort and durability for every match.</p>
+              <div class="price mb-2">$128</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Diadora Brasil Elite', 128, 'img13.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 12 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img14.png" class="card-img-top" alt="Football Shoe 12">
+            <div class="card-body">
+              <h5 class="card-title">Asics DS Light</h5>
+              <p class="card-text">Lightweight and supportive. Designed for players who value speed and comfort.</p>
+              <div class="price mb-2">$108</div>
+              <a href="cart.html" class="btn btn-primary w-100" onclick="addToCart('Asics DS Light', 108, 'img14.png'); return false;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container py-5" id="about">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img1.png" alt="About Elite Football Shoes" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2 class="mb-3" style="font-family: 'Montserrat', Arial, sans-serif;">About Us</h2>
+          <p style="font-size: 1.1rem;">
+            Elite Football Shoes is dedicated to providing top-quality football footwear for players of all levels. Our curated selection features the latest models from leading brands, ensuring you get the best in comfort, performance, and style. Whether you're a professional or just starting out, our mission is to help you play your best game.
+          </p>
+          <ul>
+            <li>Wide range of premium football shoes</li>
+            <li>Trusted brands and latest releases</li>
+            <li>Fast shipping and easy returns</li>
+            <li>Customer-first support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container py-5" id="contact">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 class="mb-3 text-center" style="font-family: 'Montserrat', Arial, sans-serif;">Contact Us</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="How can we help you?"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        &copy; 2025 Elite Football Shoes. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+function addToCart(name, price, img) {
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  let idx = cart.findIndex(item => item.name === name);
+  if (idx > -1) {
+    cart[idx].qty += 1;
+  } else {
+    cart.push({ name, price, img, qty: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  window.location = 'cart.html';
+}
+</script>
+  </body>
+</html>
